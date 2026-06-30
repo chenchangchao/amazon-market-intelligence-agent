@@ -37,3 +37,8 @@ export_safe
 
 # misc
 coverage
+
+# env
+.env
+.env.*
+!.env.example
