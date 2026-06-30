@@ -1,0 +1,24 @@
+{
+  "name": "market-api",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/pg": "^8.20.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.0.6",
+    "dotenv": "^17.4.2",
+    "hono": "^4.12.27",
+    "pg": "^8.22.0",
+    "zod": "^4.4.3"
+  },
+  "scripts": {
+    "dev": "bun run src/api/server.ts",
+    "start": "bun run src/api/server.ts"
+  }
+}

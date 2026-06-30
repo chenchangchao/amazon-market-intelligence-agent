@@ -1,0 +1,22 @@
+[Unit]
+Description=Reverse SSH tunnel from Tencent market-api to AWS
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=root
+Environment=HOME=/root
+ExecStart=/usr/bin/ssh -N \
+  -i /root/.ssh/tencent_to_aws_market_tunnel \
+  -o BatchMode=yes \
+  -o StrictHostKeyChecking=accept-new \
+  -o ServerAliveInterval=30 \
+  -o ServerAliveCountMax=3 \
+  -o ExitOnForwardFailure=yes \
+  -R 127.0.0.1:8092:127.0.0.1:8091 \
+  ubuntu@52.38.137.85
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

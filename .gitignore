@@ -1,0 +1,39 @@
+# dependencies
+node_modules
+.bun
+.pnpm-store
+
+# build
+.next
+dist
+build
+.out
+
+# env
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+logs
+.pm2
+
+# system
+.DS_Store
+
+# data
+data
+export
+export_safe
+*.csv
+*.txt
+*.gz
+*.zip
+
+# database
+*.sqlite
+*.db
+
+# misc
+coverage
